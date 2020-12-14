@@ -1,0 +1,80 @@
+body {
+    font-family: sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    height: 400px;
+    width: 500px;
+    background: url('./landscape.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: grayscale(0.6);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card-wrapper {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.card-wrapper::before {
+    content: '';
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    display: block;
+    opacity: 0;
+    border: 1px solid white;
+    transition: 0.3s;
+}
+
+.card-wrapper h2 {
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin: 0;
+    transition: 0.3s;
+}
+
+.card-wrapper p {
+    opacity: 0;
+    visibility: hidden;
+    font-size: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.card:hover {
+    filter: unset;
+}
+
+.card:hover > .card-wrapper::before {
+    height: 300px;
+    width: 400px;
+    opacity: 1;
+}
+
+.card:hover > .card-wrapper p {
+    opacity: 1;
+    visibility: visible;
+    font-size: 14px;
+}
