@@ -13,14 +13,14 @@ body {
 .card {
     height: 400px;
     width: 500px;
-    background: url('./landscape.jpg');
+    background-image: url('./landscape.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    filter: grayscale(0.6);
+    filter: grayscale(0.5);
     color: white;
     cursor: pointer;
     transition: 0.3s;
@@ -41,8 +41,8 @@ body {
     height: 100px;
     width: 100px;
     display: block;
-    opacity: 0;
     border: 1px solid white;
+    opacity: 0;
     transition: 0.3s;
 }
 
@@ -55,9 +55,9 @@ body {
 }
 
 .card-wrapper p {
-    opacity: 0;
-    visibility: hidden;
     font-size: 0;
+    visibility: hidden;
+    opacity: 0;
     font-weight: bold;
     text-transform: uppercase;
     transition: 0.3s;
